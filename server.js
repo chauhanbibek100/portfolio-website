@@ -76,7 +76,7 @@ app.post("/api/contact", (req, res) => {
   const mailOptions = {
     from: process.env.EMAIL_USER,
     to: "bibekchauhan100@gmail.com", // Your receiving email
-    subject: `You've gotMessage from ${name}`,
+    subject: `You've got Message from ${name}`,
     text: `
       You have received a new message from your portfolio contact form!
       
