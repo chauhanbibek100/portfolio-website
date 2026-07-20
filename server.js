@@ -45,12 +45,10 @@ const writeDB = (data) => {
 app.post("/api/contact", (req, res) => {
   const { name, email, whatsapp, message } = req.body;
   if (!name || (!email && !whatsapp)) {
-    return res
-      .status(400)
-      .json({
-        error:
-          "Name and at least one contact method (Email or WhatsApp) are required.",
-      });
+    return res.status(400).json({
+      error:
+        "Name and at least one contact method (Email or WhatsApp) are required.",
+    });
   }
 
   const db = readDB();
@@ -78,7 +76,7 @@ app.post("/api/contact", (req, res) => {
   const mailOptions = {
     from: process.env.EMAIL_USER,
     to: "bibekchauhan100@gmail.com", // Your receiving email
-    subject: `New Portfolio Message from ${name}`,
+    subject: `You've gotMessage from ${name}`,
     text: `
       You have received a new message from your portfolio contact form!
       
@@ -95,23 +93,19 @@ app.post("/api/contact", (req, res) => {
     if (error) {
       console.error("Error sending email:", error);
       // We still return 201 because the database save was successful
-      return res
-        .status(201)
-        .json({
-          success: true,
-          message: "Message saved, but failed to send email.",
-          data: newContact,
-          emailError: error.message,
-        });
+      return res.status(201).json({
+        success: true,
+        message: "Message saved, but failed to send email.",
+        data: newContact,
+        emailError: error.message,
+      });
     } else {
       console.log("Email sent:", info.response);
-      return res
-        .status(201)
-        .json({
-          success: true,
-          message: "Message sent successfully to your email!",
-          data: newContact,
-        });
+      return res.status(201).json({
+        success: true,
+        message: "Message sent successfully to your email!",
+        data: newContact,
+      });
     }
   });
 });
@@ -120,11 +114,9 @@ app.post("/api/contact", (req, res) => {
 app.post("/api/projects", (req, res) => {
   const { name, email, whatsapp, projectTitle, projectDesc, budget } = req.body;
   if (!name || !projectTitle || !projectDesc) {
-    return res
-      .status(400)
-      .json({
-        error: "Name, Project Title, and Project Description are required.",
-      });
+    return res.status(400).json({
+      error: "Name, Project Title, and Project Description are required.",
+    });
   }
 
   const db = readDB();
@@ -142,13 +134,11 @@ app.post("/api/projects", (req, res) => {
   db.projects.push(newProject);
   writeDB(db);
 
-  res
-    .status(201)
-    .json({
-      success: true,
-      message: "Project idea pitched successfully!",
-      data: newProject,
-    });
+  res.status(201).json({
+    success: true,
+    message: "Project idea pitched successfully!",
+    data: newProject,
+  });
 });
 
 // GET all contact messages (for dev verification)
