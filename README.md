@@ -73,3 +73,5 @@ Run `oxlint` to perform fast static analysis:
 ```bash
 npm run lint
 ```
+👨‍💻 Author
+Name : Bibek Chauhan
