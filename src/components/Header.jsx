@@ -7,6 +7,7 @@ const navItems = [
   { id: 'skills', label: 'Skills' },
   { id: 'projects', label: 'Projects' },
   { id: 'education', label: 'Education' },
+  { id: 'services', label: 'Services' },
   { id: 'contact', label: 'Contact' },
 ];
 
@@ -23,7 +24,7 @@ export default function Header({ theme, toggleTheme }) {
   const handleScroll = () => {
     if (isClickScrolling.current) return;
     
-    const scrollPos = window.scrollY + 120;
+    const scrollPos = window.scrollY + 110;
     for (const item of navItems) {
       const el = document.getElementById(item.id);
       if (el) {

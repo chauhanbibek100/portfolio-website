@@ -1,0 +1,448 @@
+/* ===================================================================
+   EducationSection.css – Academic Timeline & Certifications Grid
+   =================================================================== */
+
+.education-section {
+  padding: 28px 8% 20px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  position: relative;
+  background: transparent;
+}
+
+.education-container {
+  max-width: 1200px;
+  width: 100%;
+}
+
+/* ── Section Header ─────────────────────────────────────────────── */
+.education-header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.education-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 18px;
+  border-radius: 999px;
+  font-family: var(--font-mono, monospace);
+  font-size: 0.8rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--accent-cyan, #00f5d4);
+  background: var(--pill-bg, rgba(0, 245, 212, 0.1));
+  border: 1px solid var(--accent-cyan, #00f5d4);
+  margin-bottom: 14px;
+}
+
+.education-title {
+  font-family: var(--font-primary, sans-serif);
+  font-size: clamp(2rem, 5vw, 3.2rem);
+  font-weight: 800;
+  line-height: 1.2;
+}
+
+/* ── Grid Layout ────────────────────────────────────────────────── */
+.education-grid {
+  display: grid;
+  grid-template-columns: 1.1fr 1.3fr;
+  gap: 32px;
+  align-items: start;
+}
+
+@media (max-width: 1024px) {
+  .education-grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+}
+
+/* ── Glassmorphism Panel ────────────────────────────────────────── */
+.glass-panel {
+  background: var(--bg-card, rgba(17, 24, 39, 0.85));
+  border: 1px solid var(--bg-glass-border, rgba(255, 255, 255, 0.08));
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-radius: 16px;
+  padding: 24px;
+  box-shadow: var(--shadow-card);
+  transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.glass-panel:hover {
+  border-color: rgba(0, 245, 212, 0.2);
+}
+
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid var(--border-color, rgba(255, 255, 255, 0.08));
+}
+
+.card-header h3 {
+  font-size: 1.2rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--text-primary);
+}
+
+.card-header h3 i {
+  color: var(--accent-cyan);
+}
+
+.timeline-glow-indicator {
+  font-family: var(--font-mono, monospace);
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  color: var(--accent-purple, #7b61ff);
+  background: rgba(123, 97, 255, 0.1);
+  padding: 4px 10px;
+  border-radius: 6px;
+  border: 1px solid rgba(123, 97, 255, 0.2);
+}
+
+.cert-count-badge {
+  font-family: var(--font-mono, monospace);
+  font-size: 0.75rem;
+  color: var(--accent-cyan, #00f5d4);
+  background: rgba(0, 245, 212, 0.1);
+  padding: 4px 12px;
+  border-radius: 99px;
+  border: 1px solid rgba(0, 245, 212, 0.25);
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+/* ── Academic Timeline (Left) ───────────────────────────────────── */
+.timeline-container {
+  position: relative;
+  padding-left: 20px;
+}
+
+/* Vertical Timeline Connector Line */
+.timeline-line {
+  position: absolute;
+  left: 5px;
+  top: 10px;
+  bottom: 10px;
+  width: 2px;
+  background: linear-gradient(
+    to bottom,
+    var(--accent-cyan) 0%,
+    var(--accent-purple) 50%,
+    var(--border-color) 100%
+  );
+  opacity: 0.8;
+  border-radius: 4px;
+}
+
+.timeline-item {
+  position: relative;
+  margin-bottom: 24px;
+  padding-left: 25px;
+}
+
+.timeline-item:last-child {
+  margin-bottom: 10px;
+}
+
+/* Timeline glowing node */
+.timeline-node {
+  position: absolute;
+  left: -24px; /* Centered over the timeline line */
+  top: 4px;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: var(--bg-primary, #0a0e1a);
+  border: 3px solid var(--accent-cyan);
+  box-shadow: 0 0 10px rgba(0, 245, 212, 0.5);
+  transition: all 0.3s ease;
+  z-index: 2;
+}
+
+.timeline-node.pursuing {
+  border-color: var(--accent-cyan);
+  box-shadow: 0 0 12px var(--accent-cyan);
+  animation: pulse-glow 2s infinite ease-in-out;
+}
+
+.timeline-node.completed {
+  border-color: var(--accent-green, #22c55e);
+  box-shadow: 0 0 8px var(--accent-green);
+}
+
+.timeline-item:hover .timeline-node {
+  transform: scale(1.3);
+  background: var(--accent-cyan);
+  border-color: #fff;
+  box-shadow: 0 0 16px var(--accent-cyan);
+}
+
+.timeline-item:hover .timeline-node.completed {
+  background: var(--accent-green);
+  box-shadow: 0 0 16px var(--accent-green);
+}
+
+@keyframes pulse-glow {
+  0%, 100% {
+    box-shadow: 0 0 8px var(--accent-cyan);
+  }
+  50% {
+    box-shadow: 0 0 16px var(--accent-cyan);
+    transform: scale(1.1);
+  }
+}
+
+/* Timeline Content */
+.timeline-content {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.timeline-content-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 8px;
+}
+
+.degree-title {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  line-height: 1.3;
+}
+
+.status-badge {
+  font-family: var(--font-mono, monospace);
+  font-size: 0.65rem;
+  text-transform: uppercase;
+  padding: 3px 8px;
+  border-radius: 4px;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+}
+
+.status-badge.pursuing {
+  background: rgba(0, 245, 212, 0.12);
+  color: var(--accent-cyan);
+  border: 1px solid rgba(0, 245, 212, 0.2);
+}
+
+.status-badge.completed {
+  background: rgba(34, 197, 94, 0.12);
+  color: var(--accent-green, #22c55e);
+  border: 1px solid rgba(34, 197, 94, 0.2);
+}
+
+.institution-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px;
+  font-size: 0.82rem;
+  color: var(--text-secondary);
+}
+
+.institution-name {
+  font-weight: 500;
+}
+
+.date-range {
+  font-family: var(--font-mono, monospace);
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.timeline-meta {
+  display: flex;
+  gap: 8px;
+}
+
+.grade-badge {
+  font-size: 0.82rem;
+  background: var(--pill-bg, rgba(255, 255, 255, 0.05));
+  border: 1px solid var(--border-color);
+  color: var(--text-secondary);
+  padding: 4px 10px;
+  border-radius: 6px;
+  display: inline-block;
+}
+
+.grade-badge strong {
+  color: var(--text-primary);
+}
+
+.timeline-desc {
+  font-size: 0.88rem;
+  color: var(--text-muted);
+  line-height: 1.5;
+  margin-top: 4px;
+}
+
+/* ── Certifications Grid (Right) ────────────────────────────────── */
+.certifications-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 12px;
+  max-height: 380px;
+  overflow-y: auto;
+  padding-right: 6px;
+}
+
+/* Custom scrollbar for certifications grid */
+.certifications-grid::-webkit-scrollbar {
+  width: 5px;
+}
+
+.certifications-grid::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.certifications-grid::-webkit-scrollbar-thumb {
+  background: var(--scrollbar-thumb, rgba(255, 255, 255, 0.15));
+  border-radius: 10px;
+}
+
+.certifications-grid::-webkit-scrollbar-thumb:hover {
+  background: var(--accent-cyan);
+}
+
+/* Individual Certification Card */
+.certification-card-item {
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid var(--border-color, rgba(255, 255, 255, 0.08));
+  border-radius: 10px;
+  padding: 12px 16px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 10px;
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  text-decoration: none;
+  color: inherit;
+  position: relative;
+  overflow: hidden;
+}
+
+.certification-card-item::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background: var(--gradient-main);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s ease;
+}
+
+.certification-card-item:hover {
+  background: var(--bg-card-hover, rgba(30, 41, 59, 0.95));
+  border-color: rgba(0, 245, 212, 0.3);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15), var(--shadow-glow);
+}
+
+.certification-card-item:hover::before {
+  transform: scaleX(1);
+}
+
+.cert-title-text {
+  font-size: 0.88rem;
+  font-weight: 600;
+  line-height: 1.35;
+  color: var(--text-primary);
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  transition: color 0.2s ease;
+}
+
+.certification-card-item:hover .cert-title-text {
+  color: var(--accent-cyan);
+}
+
+.cert-card-footer {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  font-size: 0.76rem;
+}
+
+.view-cert-link {
+  color: var(--accent-purple, #7b61ff);
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  transition: color 0.2s ease;
+}
+
+.certification-card-item:hover .view-cert-link {
+  color: var(--accent-cyan);
+}
+
+.view-cert-link i {
+  font-size: 0.7rem;
+  transition: transform 0.2s ease;
+}
+
+.certification-card-item:hover .view-cert-link i {
+  transform: translate(2px, -2px);
+}
+
+/* ── Light Mode Adjustments ──────────────────────────────────────── */
+[data-theme="light"] .glass-panel {
+  background: var(--bg-card, rgba(255, 255, 255, 0.85));
+}
+
+[data-theme="light"] .certification-card-item {
+  background: rgba(0, 0, 0, 0.02);
+}
+
+[data-theme="light"] .certification-card-item:hover {
+  background: var(--bg-card-hover, rgba(255, 255, 255, 0.95));
+}
+
+[data-theme="light"] .timeline-node {
+  background: var(--bg-primary, #f0f4f8);
+}
+
+/* ── Responsive breakpoints ─────────────────────────────────────── */
+@media (max-width: 768px) {
+  .education-section {
+    padding: 20px 5% 16px;
+  }
+  
+  .glass-panel {
+    padding: 22px;
+  }
+
+  .institution-info {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 4px;
+  }
+
+  .certifications-grid {
+    grid-template-columns: 1fr;
+  }
+}

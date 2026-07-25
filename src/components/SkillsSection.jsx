@@ -1,6 +1,8 @@
 import { useState } from 'react';
 import './SkillsSection.css';
 
+// To add new skills in the future, simply add a new object to the 'skills' array of any category below.
+// Structure: { name: 'SkillName', icon: 'font-awesome-class', color: '#hexColor', text: 'FallbackShortTextIfNoIcon' }
 const skillCategories = [
   { title: 'Languages', category: 'languages', skills: [
     { name: 'JavaScript', icon: 'fab fa-js-square', color: '#f7df1e', level: 90 },
@@ -14,7 +16,7 @@ const skillCategories = [
   ]},
   { title: 'Backend Development', category: 'frameworks', skills: [
     { name: 'Node.js', icon: 'fab fa-node-js', color: '#68a063', level: 85 },
-    { name: 'Express', icon: null, text: 'Ex', color: '#f1f5f9', level: 80 },
+    { name: 'Express', icon: null, text: 'Ex', color: '#888888', level: 80 },
     { name: 'Django', icon: 'fab fa-python', color: '#0c4b33', level: 60 },
   ]},
   { title: 'Database Systems', category: 'tools', skills: [
@@ -77,15 +79,6 @@ export default function SkillsSection() {
                       )}
                     </div>
                     <span className="skill-name">{skill.name}</span>
-                    <div className="skill-bar-track">
-                      <div
-                        className="skill-bar-fill"
-                        style={{
-                          '--fill-width': `${skill.level}%`,
-                          '--skill-color': skill.color,
-                        }}
-                      />
-                    </div>
                   </li>
                 ))}
               </ul>

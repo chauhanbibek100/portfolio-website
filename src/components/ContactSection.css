@@ -4,7 +4,7 @@
 
 /* ---------- Section Wrapper ---------- */
 .contact-section {
-  padding: 80px 8% 60px;
+  padding: 24px 8% 32px;
   position: relative;
 }
 
@@ -16,13 +16,10 @@
 /* ---------- Header ---------- */
 .contact-header {
   text-align: center;
-  margin-bottom: 48px;
+  margin-bottom: 20px;
 }
 
 .contact-header .section-title {
-  font-family: var(--font-primary);
-  font-size: 2.5rem;
-  font-weight: 700;
   color: var(--text-primary);
   margin: 0 0 12px;
 }
@@ -46,7 +43,7 @@
 .contact-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 32px;
+  gap: 24px;
   align-items: stretch;
 }
 
@@ -56,7 +53,7 @@
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
   border: 1px solid var(--bg-glass-border);
-  border-radius: 16px;
+  border-radius: 14px;
   transition:
     border-color 0.3s ease,
     box-shadow 0.3s ease,
@@ -70,7 +67,7 @@
 
 /* ---------- LEFT — Form Card ---------- */
 .contact-form-card {
-  padding: 32px;
+  padding: 16px 18px;
   height: 100%;
   display: flex;
   flex-direction: column;
@@ -79,17 +76,17 @@
 .form-card-header {
   display: flex;
   align-items: center;
-  gap: 10px;
-  margin-bottom: 24px;
+  gap: 8px;
+  margin-bottom: 14px;
 }
 
 .form-card-header .form-icon {
-  font-size: 1.4rem;
+  font-size: 1.1rem;
 }
 
 .form-card-header h3 {
   font-family: var(--font-primary);
-  font-size: 1.25rem;
+  font-size: 1.05rem;
   font-weight: 600;
   color: var(--text-primary);
   margin: 0;
@@ -99,7 +96,7 @@
 .contact-form {
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 12px;
 }
 
 .form-group {
@@ -123,9 +120,9 @@
 .form-group textarea {
   background: var(--bg-input);
   border: 1px solid var(--border-color);
-  border-radius: 12px;
-  padding: 12px 16px;
-  font-size: 0.95rem;
+  border-radius: 10px;
+  padding: 9px 13px;
+  font-size: 0.88rem;
   font-family: var(--font-primary);
   color: var(--text-primary);
   outline: none;
@@ -166,20 +163,20 @@
   align-items: center;
   justify-content: center;
   gap: 8px;
-  padding: 14px 28px;
+  padding: 10px 22px;
   background: linear-gradient(135deg, #0072ff, #00c6ff);
   color: #fff;
   font-family: var(--font-primary);
-  font-size: 1rem;
+  font-size: 0.88rem;
   font-weight: 600;
   border: none;
-  border-radius: 12px;
+  border-radius: 10px;
   cursor: pointer;
   transition:
     transform 0.25s ease,
     box-shadow 0.25s ease,
     opacity 0.25s ease;
-  margin-top: 4px;
+  margin-top: 2px;
 }
 
 .submit-btn:hover:not(:disabled) {
@@ -220,7 +217,7 @@
 .contact-right-column {
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 16px;
   height: 100%;
 }
 
@@ -228,62 +225,62 @@
 .contact-info-panel {
   display: flex;
   flex-direction: column;
-  padding: 24px 32px;
+  padding: 14px 18px;
   background: linear-gradient(
     160deg,
     rgba(0, 198, 255, 0.05),
     rgba(0, 114, 255, 0.02)
   );
-  border-radius: 16px;
+  border-radius: 14px;
   flex: 1;
   justify-content: center;
 }
 
 .info-panel-title {
   font-family: var(--font-primary);
-  font-size: 1.3rem;
+  font-size: 1.05rem;
   font-weight: 700;
   color: var(--text-primary);
-  margin: 0 0 20px 0;
+  margin: 0 0 12px 0;
   text-align: left;
 }
 
 .info-list {
   display: flex;
   flex-direction: column;
-  gap: 16px;
+  gap: 10px;
 }
 
 .info-item {
   display: flex;
   align-items: flex-start;
-  gap: 12px;
+  gap: 9px;
 }
 
 .info-icon {
-  font-size: 1.2rem;
+  font-size: 0.95rem;
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 36px;
-  height: 36px;
+  width: 28px;
+  height: 28px;
   background: rgba(0, 198, 255, 0.1);
-  border-radius: 12px;
+  border-radius: 8px;
   color: var(--accent-cyan);
   flex-shrink: 0;
 }
 
 .info-content h4 {
   font-family: var(--font-primary);
-  font-size: 0.9rem;
+  font-size: 0.75rem;
   font-weight: 600;
   color: var(--text-secondary);
-  margin: 0 0 2px 0;
+  margin: 0 0 1px 0;
 }
 
 .info-content p {
   margin: 0;
-  font-size: 0.9rem;
+  font-size: 0.8rem;
   color: var(--text-primary);
   font-weight: 500;
   line-height: 1.4;
@@ -306,7 +303,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 24px 32px;
+  padding: 14px 18px;
   text-decoration: none;
   cursor: pointer;
   background: linear-gradient(
@@ -316,7 +313,7 @@
   );
   border-color: rgba(37, 211, 102, 0.2);
   text-align: center;
-  border-radius: 16px;
+  border-radius: 14px;
   flex: 1;
 }
 
@@ -327,15 +324,15 @@
 }
 
 .wa-panel-icon {
-  width: 56px;
-  height: 56px;
+  width: 40px;
+  height: 40px;
   display: flex;
   align-items: center;
   justify-content: center;
   border-radius: 50%;
   background: rgba(37, 211, 102, 0.12);
   color: #25d366;
-  margin-bottom: 12px;
+  margin-bottom: 8px;
   /* transition: transform 0.3s ease; */
 }
 
@@ -345,30 +342,30 @@
 
 .wa-panel-title {
   font-family: var(--font-primary);
-  font-size: 1.2rem;
+  font-size: 1rem;
   font-weight: 700;
   color: var(--text-primary);
-  margin: 0 0 4px;
+  margin: 0 0 3px;
 }
 
 .wa-panel-number {
-  font-size: 0.9rem;
+  font-size: 0.8rem;
   color: var(--text-secondary);
-  margin: 0 0 12px;
+  margin: 0 0 8px;
   font-family: var(--font-mono);
 }
 
 .wa-panel-badge {
   display: inline-flex;
   align-items: center;
-  gap: 8px;
-  padding: 6px 12px;
+  gap: 6px;
+  padding: 4px 10px;
   border-radius: 999px;
   background: rgba(37, 211, 102, 0.1);
-  font-size: 0.75rem;
+  font-size: 0.7rem;
   color: #25d366;
   font-weight: 500;
-  margin-bottom: 16px;
+  margin-bottom: 10px;
 }
 
 .wa-pulse {
@@ -395,13 +392,13 @@
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  padding: 10px 24px;
+  padding: 8px 18px;
   background: linear-gradient(135deg, #25d366, #128c7e);
   color: #fff;
   font-family: var(--font-primary);
-  font-size: 0.9rem;
+  font-size: 0.82rem;
   font-weight: 600;
-  border-radius: 12px;
+  border-radius: 10px;
   transition:
     transform 0.25s ease,
     box-shadow 0.25s ease;
@@ -498,7 +495,7 @@
   }
 
   .contact-section {
-    padding: 60px 5% 40px;
+    padding: 20px 5% 24px;
   }
 
   .contact-header .section-title {
@@ -507,7 +504,7 @@
 
   .contact-info-panel,
   .whatsapp-panel {
-    padding: 32px 24px;
+    padding: 18px 16px;
   }
 }
 
@@ -561,4 +558,8 @@
 
 [data-theme="light"] .toast-error {
   background: rgba(255, 59, 48, 0.08);
+}
+
+.wa-panel-icon i {
+  font-size: 1.4rem;
 }

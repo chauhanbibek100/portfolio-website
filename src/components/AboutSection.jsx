@@ -4,15 +4,17 @@ import "./AboutSection.css";
 export default function AboutSection() {
   return (
     <section className="about-section" id="about">
-      <div className="about-inner">
-        <div className="about-left">
+        <div className="about-header">
           <span className="section-badge">
             <i className="fas fa-user"></i> About Me
           </span>
           <h2 className="section-title">
             Who <span className="gradient-text">I Am</span>
           </h2>
+        </div>
 
+      <div className="about-inner">
+        <div className="about-left">
           <div className="code-editor">
             <div className="editor-header">
               <div className="editor-dots">
@@ -31,10 +33,10 @@ export default function AboutSection() {
   degree: "BE-CSE",
   focus: "Modern Web Applications",
   stack: [
-    "React", "Next.js",
+    "MERN", "Java","Next.js",
     "TypeScript",
-    "Tailwind", "Node.js",
-    "MongoDB"
+    "Tailwind", "Python",
+    "SQL","Spring Boot"
   ],
   available: true,
   hire() {
@@ -48,29 +50,20 @@ export default function AboutSection() {
 
         <div className="about-right">
           <div className="about-content">
-            <h3 className="about-heading">
-              Passionate About
-              <br />
-              Building &amp; Learning
-            </h3>
+            <h3 className="about-heading">About Me</h3>
             <p className="about-text">
-              I'm <strong>Bibek</strong>, a passionate Computer Science student.
-              I love creating modern, responsive web applications that deliver
-              exceptional user experiences. From pixel-perfect frontends to
-              robust backend systems, I enjoy the full spectrum of web
-              development.
+              I'm <strong>Bibek</strong>, a passionate Full-Stack Developer and
+              Computer Science student. I build modern, responsive, and scalable
+              web applications with a focus on clean code, great user
+              experience, and continuous learning. I'm currently seeking
+              internship opportunities to grow as a software developer.
             </p>
-            <div className="about-badges">
-              <span className="badge">
-                <i className="fas fa-code"></i> Clean Code
-              </span>
-            </div>
             <a
-              href="https://drive.google.com/file/d/15qYOZIU4v7DYRT9I7taNmncH_pgqAZw_/view?usp=sharing"
+              href="https://drive.google.com/file/d/1p1YQaNx8pXddpu2P0Q0ITEnX1oLuThwk/view?usp=sharing"
               target="_blank"
               className="download-resume-btn"
             >
-              <i className="fas fa-eye"></i> View Resume
+              <i className="fas fa-eye"></i>Resume
             </a>
           </div>
 

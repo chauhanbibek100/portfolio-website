@@ -1,14 +1,43 @@
+import { useRef, useCallback } from "react";
 import developerImg from "../assets/developer.jpg";
 import "./HeroSection.css";
 
 export default function HeroSection() {
+  const sectionRef = useRef(null);
+
   const handleScrollTo = (id) => {
     const el = document.getElementById(id);
     if (el) el.scrollIntoView({ behavior: "smooth" });
   };
 
+  const handleMouseMove = useCallback((e) => {
+    const rect = sectionRef.current?.getBoundingClientRect();
+    if (!rect) return;
+    const x = e.clientX - rect.left;
+    const y = e.clientY - rect.top;
+    sectionRef.current.style.setProperty("--mx", `${x}px`);
+    sectionRef.current.style.setProperty("--my", `${y}px`);
+  }, []);
+
+  const handleMouseLeave = useCallback(() => {
+    // Fade spotlight to center on leave
+    if (sectionRef.current) {
+      sectionRef.current.style.setProperty("--mx", "50%");
+      sectionRef.current.style.setProperty("--my", "50%");
+    }
+  }, []);
+
   return (
-    <section className="hero-section" id="home">
+    <section
+      className="hero-section"
+      id="home"
+      ref={sectionRef}
+      onMouseMove={handleMouseMove}
+      onMouseLeave={handleMouseLeave}
+    >
+      {/* Cursor spotlight overlay */}
+      <div className="hero-spotlight" aria-hidden="true"></div>
+
       {/* Background glowing/grid decorations */}
       <div className="hero-grid-bg"></div>
       <div className="hero-glow-blob cyan"></div>
@@ -23,7 +52,6 @@ export default function HeroSection() {
           </h1>
 
           <div className="hero-role-row">
-            <i className="fas fa-layer-group role-icon"></i>
             <h2>Full-Stack Developer</h2>
           </div>
 

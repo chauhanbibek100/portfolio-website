@@ -3,13 +3,40 @@
   min-height: 100vh;
   display: flex;
   align-items: center;
-  padding: 100px 8% 60px;
+  padding: 80px 8% 28px;
   background: #060913;
   overflow: hidden;
+  /* default spotlight position — center */
+  --mx: 50%;
+  --my: 50%;
 }
 
 [data-theme="light"] .hero-section {
   background: #f0f4f8;
+}
+
+/* ── Cursor Spotlight ────────────────────────────────────────────── */
+.hero-spotlight {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 2;
+  background: radial-gradient(
+    500px circle at var(--mx) var(--my),
+    rgba(0, 245, 212, 0.07) 0%,
+    rgba(123, 97, 255, 0.04) 40%,
+    transparent 70%
+  );
+  transition: background 0.08s ease;
+}
+
+[data-theme="light"] .hero-spotlight {
+  background: radial-gradient(
+    500px circle at var(--mx) var(--my),
+    rgba(0, 180, 160, 0.06) 0%,
+    rgba(100, 80, 220, 0.03) 40%,
+    transparent 70%
+  );
 }
 
 /* Dotted Matrix Background Grid */

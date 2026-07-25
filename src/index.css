@@ -80,6 +80,10 @@ html {
   scroll-behavior: smooth;
 }
 
+section {
+  scroll-margin-top: 85px;
+}
+
 body {
   font-family: var(--font-primary);
   background: var(--bg-primary);

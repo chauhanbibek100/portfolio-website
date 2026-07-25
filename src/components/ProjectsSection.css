@@ -2,7 +2,7 @@
    PROJECTS SECTION
    ======================================== */
 .projects-section {
-  padding: 80px 8% 60px;
+  padding: 28px 8% 20px;
   position: relative;
 }
 
@@ -14,8 +14,12 @@
 .projects-header {
   display: flex;
   flex-direction: column;
-  gap: 8px;
-  margin-bottom: 32px;
+  gap: 6px;
+  margin-bottom: 18px;
+}
+
+.projects-header .section-title {
+  margin-bottom: 0;
 }
 
 .projects-subtitle {
@@ -112,25 +116,38 @@
 
 .proj-link {
   flex: 1;
-  padding: 10px;
+  padding: 10px 6px;
   border-radius: 10px;
   text-align: center;
-  font-size: 0.8rem;
+  font-size: 0.78rem;
   font-weight: 700;
   transition: all 0.3s ease;
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  gap: 6px;
+  gap: 4px;
+  border: none;
+  cursor: pointer;
+  text-decoration: none;
 }
 
-.proj-link.live {
+.proj-link.details {
   background: linear-gradient(135deg, #0072ff, #00c6ff);
   color: white;
 }
 
-.proj-link.live:hover {
+.proj-link.details:hover {
   box-shadow: 0 4px 16px rgba(0, 114, 255, 0.4);
+  transform: translateY(-1px);
+}
+
+.proj-link.live {
+  background: linear-gradient(135deg, #10b981, #059669);
+  color: white;
+}
+
+.proj-link.live:hover {
+  box-shadow: 0 4px 16px rgba(16, 185, 129, 0.4);
   transform: translateY(-1px);
 }
 
@@ -346,7 +363,7 @@
 
 @media (max-width: 576px) {
   .projects-section {
-    padding: 60px 5% 40px;
+    padding: 20px 5% 16px;
   }
 
   .projects-grid {

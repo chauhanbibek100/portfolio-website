@@ -2,8 +2,13 @@
    ABOUT SECTION
    ======================================== */
 .about-section {
-  padding: 80px 8% 60px;
+  padding: 28px 8% 20px;
   position: relative;
+}
+
+.about-header {
+  max-width: 1200px;
+  margin: 0 auto 20px;
 }
 
 .about-inner {
@@ -24,7 +29,7 @@
 .about-right {
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 16px;
 }
 
 .section-badge {
@@ -114,7 +119,6 @@
 }
 
 .about-content:hover {
-  transform: translateY(-2px);
   border-color: rgba(255, 255, 255, 0.12);
 }
 
@@ -175,7 +179,6 @@
 }
 
 .download-resume-btn:hover {
-  transform: translateY(-2px);
   box-shadow: 0 4px 16px rgba(59, 130, 246, 0.4);
 }
 
@@ -200,7 +203,6 @@
 }
 
 .pill:hover {
-  transform: translateY(-2px);
 }
 
 .pill-cyan { border-bottom: 2px solid var(--accent-cyan); color: var(--accent-cyan); }
@@ -252,7 +254,7 @@
 /* RESPONSIVE */
 @media (max-width: 768px) {
   .about-section {
-    padding: 60px 5% 40px;
+    padding: 20px 5% 16px;
   }
 
   .about-inner {
