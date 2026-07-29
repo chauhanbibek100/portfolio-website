@@ -1,5 +1,5 @@
-import React from 'react';
-import './EducationSection.css';
+import React from "react";
+import "./EducationSection.css";
 
 // ==========================================
 // DATA ARRAYS FOR EASY MAINTENANCE
@@ -28,7 +28,8 @@ const educationData = [
     status: "Pursuing",
     gradeType: "CGPA",
     grade: "7.5",
-    description: "Deepening knowledge in Core Computing, Algorithms, Data Structures, and Software Development methodologies. Actively participating in tech groups and hackathons."
+    description:
+      "Deepening knowledge in Core Computing, Algorithms, Data Structures, and Software Development methodologies. Actively participating in tech groups and hackathons.",
   },
   {
     id: 2,
@@ -38,7 +39,8 @@ const educationData = [
     status: "Completed",
     gradeType: "Score",
     grade: "85%",
-    description: "Focused on Science stream including Mathematics, Physics, Chemistry, and Computer Science basics."
+    description:
+      "Focused on Science stream including Mathematics, Physics, Chemistry, and Computer Science basics.",
   },
   {
     id: 3,
@@ -48,8 +50,9 @@ const educationData = [
     status: "Completed",
     gradeType: "Score",
     grade: "86%",
-    description: "Gained foundational academic knowledge with exceptional performances in mathematics and science subjects."
-  }
+    description:
+      "Gained foundational academic knowledge with exceptional performances in mathematics and science subjects.",
+  },
 ];
 
 /**
@@ -72,16 +75,16 @@ const certificationsData = [
     platform: "Coursera",
     date: "2024",
     link: "https://www.coursera.org/professional-certificates/meta-front-end-developer",
-    icon: "fab fa-meta"
+    icon: "fab fa-meta",
   },
   {
     id: 2,
-    title: "Programming in Java",
-    issuer: "NPTEL",
-    platform: "NPTEL",
-    date: "2023",
-    link: "https://nptel.ac.in",
-    icon: "fas fa-book"
+    title: "Spring Boot, Spring Security & Application Finalization",
+    issuer: "Board Infinity",
+    platform: "Coursera",
+    date: "2026",
+    link: "https://www.coursera.org/account/accomplishments/verify/PDQDGAKHH9WA",
+    icon: "fas fa-book",
   },
   {
     id: 3,
@@ -90,7 +93,7 @@ const certificationsData = [
     platform: "Coursera",
     date: "2024",
     link: "https://www.coursera.org/learn/react-basics",
-    icon: "fab fa-react"
+    icon: "fab fa-react",
   },
   {
     id: 4,
@@ -99,7 +102,7 @@ const certificationsData = [
     platform: "Coursera",
     date: "2024",
     link: "https://www.coursera.org/professional-certificates/ibm-full-stack-cloud-developer",
-    icon: "fab fa-ibm"
+    icon: "fab fa-ibm",
   },
   {
     id: 5,
@@ -108,7 +111,7 @@ const certificationsData = [
     platform: "LinkedIn",
     date: "2024",
     link: "https://www.linkedin.com/learning",
-    icon: "fab fa-linkedin"
+    icon: "fab fa-linkedin",
   },
   {
     id: 6,
@@ -117,7 +120,7 @@ const certificationsData = [
     platform: "Coursera",
     date: "2023",
     link: "https://www.coursera.org/professional-certificates/google-ux-design",
-    icon: "fab fa-google"
+    icon: "fab fa-google",
   },
   {
     id: 7,
@@ -126,7 +129,7 @@ const certificationsData = [
     platform: "freeCodeCamp",
     date: "2023",
     link: "https://www.freecodecamp.org/certification/fccdf85764f-4d64-4bf8-be90-e74f26b55cf9",
-    icon: "fab fa-free-code-camp"
+    icon: "fab fa-free-code-camp",
   },
   {
     id: 8,
@@ -135,7 +138,7 @@ const certificationsData = [
     platform: "Coursera",
     date: "2023",
     link: "https://www.coursera.org/learn/introduction-to-databases",
-    icon: "fas fa-database"
+    icon: "fas fa-database",
   },
   {
     id: 9,
@@ -144,7 +147,7 @@ const certificationsData = [
     platform: "Coursera",
     date: "2023",
     link: "https://www.coursera.org/learn/agile-software-development",
-    icon: "fas fa-sync"
+    icon: "fas fa-sync",
   },
   {
     id: 10,
@@ -153,15 +156,14 @@ const certificationsData = [
     platform: "Udemy",
     date: "2023",
     link: "https://www.udemy.com",
-    icon: "fab fa-css3-alt"
-  }
+    icon: "fab fa-css3-alt",
+  },
 ];
 
 export default function EducationSection() {
   return (
     <section id="education" className="education-section">
       <div className="education-container">
-        
         {/* Section Header */}
         <div className="education-header">
           <span className="education-badge">
@@ -174,38 +176,43 @@ export default function EducationSection() {
 
         {/* Two-Column Grid Layout */}
         <div className="education-grid">
-          
           {/* Left Column: Academic Timeline */}
           <div className="education-card glass-panel">
             <div className="card-header">
-              <h3><i className="fas fa-university"></i> Academic Timeline</h3>
+              <h3>
+                <i className="fas fa-university"></i> Academic Timeline
+              </h3>
               <span className="timeline-glow-indicator">Education</span>
             </div>
-            
+
             <div className="timeline-container">
               <div className="timeline-line"></div>
               {educationData.map((edu) => (
                 <div className="timeline-item" key={edu.id}>
                   {/* Glowing vertical node */}
-                  <div className={`timeline-node ${edu.status.toLowerCase()}`}></div>
-                  
+                  <div
+                    className={`timeline-node ${edu.status.toLowerCase()}`}
+                  ></div>
+
                   {/* Content card */}
                   <div className="timeline-content">
                     <div className="timeline-content-header">
                       <h4 className="degree-title">{edu.degree}</h4>
-                      <span className={`status-badge ${edu.status.toLowerCase()}`}>
+                      <span
+                        className={`status-badge ${edu.status.toLowerCase()}`}
+                      >
                         {edu.status}
                       </span>
                     </div>
-                    
+
                     <div className="institution-info">
-                      <span className="institution-name">{edu.institution}</span>
+                      <span className="institution-name">
+                        {edu.institution}
+                      </span>
                       <span className="date-range">
                         <i className="far fa-calendar-alt"></i> {edu.period}
                       </span>
                     </div>
-
-
                   </div>
                 </div>
               ))}
@@ -215,9 +222,12 @@ export default function EducationSection() {
           {/* Right Column: Certifications Grid */}
           <div className="certifications-card glass-panel">
             <div className="card-header">
-              <h3><i className="fas fa-award"></i> Professional Licenses</h3>
+              <h3>
+                <i className="fas fa-award"></i> Professional Licenses
+              </h3>
               <span className="cert-count-badge">
-                <i className="fas fa-certificate"></i> {certificationsData.length}+ Certifications
+                <i className="fas fa-certificate"></i>{" "}
+                {certificationsData.length}+ Certifications
               </span>
             </div>
 
@@ -242,7 +252,6 @@ export default function EducationSection() {
               ))}
             </div>
           </div>
-
         </div>
       </div>
     </section>
