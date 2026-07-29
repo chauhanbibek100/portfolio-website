@@ -70,12 +70,11 @@ const educationData = [
 const certificationsData = [
   {
     id: 1,
-    title: "Meta Front-End Developer Professional Certificate",
-    issuer: "Meta",
+    title: "Python for Data Science, AI & Development",
+    issuer: "IBM",
     platform: "Coursera",
     date: "2024",
-    link: "https://www.coursera.org/professional-certificates/meta-front-end-developer",
-    icon: "fab fa-meta",
+    link: "https://www.coursera.org/account/accomplishments/verify/LA5RA8FCQJOS",
   },
   {
     id: 2,
@@ -84,7 +83,6 @@ const certificationsData = [
     platform: "Coursera",
     date: "2026",
     link: "https://www.coursera.org/account/accomplishments/verify/PDQDGAKHH9WA",
-    icon: "fas fa-book",
   },
   {
     id: 3,
