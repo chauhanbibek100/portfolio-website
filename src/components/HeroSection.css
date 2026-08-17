@@ -137,7 +137,10 @@
 }
 
 .hero-name {
-  background: linear-gradient(135deg, #00c6ff, #0072ff, #7b61ff);
+  /* background: linear-gradient(135deg, #00c6ff, #0072ff, #7b61ff); */
+  /* background: linear-gradient(135deg, #00f0ff, #00a3ff, #0047ff); */
+  /* background: linear-gradient(135deg, #00bfff, #008cff, #0057ff); */
+
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;

@@ -156,6 +156,14 @@ const certificationsData = [
     date: "2024",
     link: "https://www.coursera.org/account/accomplishments/verify/LA5RA8FCQJOS",
   },
+  {
+    id: 12,
+    title: "Advanced Gen AI & Prompt Engineering",
+    issuer: "Chandigarh University",
+    platform: "Online Course by CU",
+    date: "2025",
+    link: "https://drive.google.com/file/d/1u4FVkqXpY32v9nEVSAOwB_H5NzuCLS_m/view?usp=sharing",
+  },
 ];
 
 export default function EducationSection() {
