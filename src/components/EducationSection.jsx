@@ -164,6 +164,14 @@ const certificationsData = [
     date: "2025",
     link: "https://drive.google.com/file/d/1u4FVkqXpY32v9nEVSAOwB_H5NzuCLS_m/view?usp=sharing",
   },
+  {
+    id: 13,
+    title: "Web Application Technologies and Django",
+    issuer: "University of Michigan",
+    platform: "Coursera",
+    date: "2026",
+    link: "https://www.coursera.org/account/accomplishments/verify/L9A7TI8JUD21",
+  },
 ];
 
 export default function EducationSection() {
