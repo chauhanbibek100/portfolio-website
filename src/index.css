@@ -4,6 +4,9 @@
 :root {
   --font-primary: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
   --font-mono: 'JetBrains Mono', 'Fira Code', monospace;
+  --btn-gradient: linear-gradient(135deg, #7292b5, #245bc1);
+  --btn-glow: rgba(36, 91, 193, 0.3);
+  --btn-glow-hover: rgba(36, 91, 193, 0.45);
 }
 
 [data-theme="dark"] {

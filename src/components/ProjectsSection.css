@@ -132,12 +132,12 @@
 }
 
 .proj-link.details {
-  background: linear-gradient(135deg, #0072ff, #00c6ff);
+  background: var(--btn-gradient, linear-gradient(135deg, #7292b5, #245bc1));
   color: white;
 }
 
 .proj-link.details:hover {
-  box-shadow: 0 4px 16px rgba(0, 114, 255, 0.4);
+  box-shadow: 0 6px 20px var(--btn-glow-hover, rgba(36, 91, 193, 0.45));
   transform: translateY(-1px);
 }
 
@@ -335,12 +335,12 @@
 }
 
 .modal-btn.demo {
-  background: linear-gradient(135deg, #0072ff, #00c6ff);
+  background: var(--btn-gradient, linear-gradient(135deg, #7292b5, #245bc1));
   color: white;
 }
 
 .modal-btn.demo:hover {
-  box-shadow: 0 4px 20px rgba(0, 114, 255, 0.4);
+  box-shadow: 0 6px 24px var(--btn-glow-hover, rgba(36, 91, 193, 0.45));
   transform: translateY(-1px);
 }
 

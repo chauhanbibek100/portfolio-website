@@ -56,9 +56,9 @@ export default function HeroSection() {
           </div>
 
           <p className="hero-subtitle">
-            Building fast, scalable web applications with clean code
+            Building fast, scalable web applications with modern technologies
             <br />
-            and intuitive user experiences.
+            AI integration and intuitive user experiences.
           </p>
 
           <div className="hero-actions">

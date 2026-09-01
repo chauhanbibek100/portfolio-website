@@ -221,8 +221,8 @@
   border-radius: 12px;
   font-size: 0.9rem;
   font-weight: 700;
-  color: var(--bg-primary, #0a0e1a);
-  background: var(--gradient-main);
+  color: #ffffff;
+  background: var(--btn-gradient, linear-gradient(135deg, #7292b5, #245bc1));
   border: none;
   cursor: pointer;
   white-space: nowrap;
@@ -230,12 +230,12 @@
   align-items: center;
   gap: 8px;
   transition: all 0.3s ease;
-  box-shadow: 0 4px 16px rgba(0, 245, 212, 0.2);
+  box-shadow: 0 4px 16px var(--btn-glow, rgba(36, 91, 193, 0.3));
 }
 
 .cta-button:hover {
   transform: translateY(-2px);
-  box-shadow: 0 6px 24px rgba(0, 245, 212, 0.35);
+  box-shadow: 0 6px 24px var(--btn-glow-hover, rgba(36, 91, 193, 0.45));
 }
 
 .cta-button i {
@@ -256,7 +256,7 @@
 }
 
 [data-theme="light"] .cta-button {
-  color: #fff;
+  color: #ffffff;
 }
 
 /* ── Responsive ─────────────────────────────────────────────────── */

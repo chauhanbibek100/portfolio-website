@@ -55,9 +55,9 @@
 }
 
 .navbar-pill-btn.active {
-  background: linear-gradient(135deg, #0072ff, #00c6ff);
+  background: var(--btn-gradient, linear-gradient(135deg, #7292b5, #245bc1));
   color: #fff;
-  box-shadow: 0 4px 15px rgba(0, 114, 255, 1);
+  box-shadow: 0 4px 15px var(--btn-glow, rgba(36, 91, 193, 0.5));
 }
 
 .navbar-actions {
