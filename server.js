@@ -103,7 +103,7 @@ app.post("/api/contact", (req, res) => {
       console.log("Email sent:", info.response);
       return res.status(201).json({
         success: true,
-        message: "Message sent successfully to your email!",
+        message: "Message sent successfully!",
         data: newContact,
       });
     }
