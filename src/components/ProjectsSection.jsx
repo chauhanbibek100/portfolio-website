@@ -1,8 +1,42 @@
 import { useState, useEffect } from "react";
 import "./ProjectsSection.css";
 import mstVisualizerImg from "../assets/mst-visualizer.png";
+import zenviaLivingImg from "../assets/zenviaLiving.png";
 
 export const projects = [
+  {
+    id: "ZenviaLiving",
+    title: "ZenviaLiving",
+    desc: "Looking for rooms, villas, or homes to stay in, whether abroad or locally, with easy listing for property owners.",
+    longDesc:
+      "This project is designed for people who are looking for rooms, villas, or homes to stay in, whether in a foreign country or their own country. Users can easily search for and find suitable accommodations based on their needs. It also allows homeowners and property owners to list their rooms, villas, or homes on the platform.",
+    tags: [
+      "EJS",
+      "MongoDB Atlas",
+      "Cloudinary",
+      "Node.js",
+      "JavaScript",
+      "HTML5",
+      "CSS3",
+      "Express.js",
+      "Map API",
+      "jwt-authentication",
+      "jwt-authorization",
+    ],
+    features: [
+      "Property Search & Discovery: Browse and search for available rooms, villas, and homes based on user requirements.",
+      "Property Listing: Allows property owners to list their rooms, villas, and homes with relevant property information.",
+      "User Authentication & Authorization: Secure user registration and login with role-based access and JWT authentication.",
+      "Property Images & Details: Upload property images and provide detailed information, including location and other property details.",
+    ],
+    gradient: "linear-gradient(135deg, #f093fb, #f5576c)",
+    icon: "fas fa-home",
+    iconLabel: "Rental Platform",
+    image: zenviaLivingImg,
+    demoLink: "https://zenvia-living-project.onrender.com/listings",
+    repoLink: "https://github.com/chauhanbibek100/Zenvia-Living",
+  },
+
   {
     id: "mst-visualizer",
     title: "MST Visualizer",
@@ -22,25 +56,6 @@ export const projects = [
     image: mstVisualizerImg,
     demoLink: "https://mst-algo-visualizer.vercel.app/",
     repoLink: "https://github.com/chauhanbibek100/MST-AlgoVisualizer",
-  },
-  {
-    id: "chat",
-    title: "Real-Time Chat App",
-    desc: "Socket.io powered chat with rooms, typing indicators, and file sharing.",
-    longDesc:
-      "An instant messaging dashboard designed for collaborative workspaces. Operating on high-speed WebSockets, it supports multi-room structures, active typing indicator flags, unread message badges, and media file uploads via AWS S3.",
-    tags: ["Next.js", "Socket.io", "Redis", "Node.js", "AWS S3", "MongoDB"],
-    features: [
-      "Instant message delivery with sub-10ms delivery latency via Socket.io.",
-      "State-aware presence indicators showing online/offline user statuses.",
-      "Redis Pub/Sub adapter integration supporting horizontally scaled websocket servers.",
-      "Direct drag-and-drop file sharing with pre-signed upload URLs.",
-    ],
-    gradient: "linear-gradient(135deg, #f093fb, #f5576c)",
-    icon: "fas fa-comments",
-    iconLabel: "Chat App",
-    demoLink: "#",
-    repoLink: "https://github.com",
   },
   {
     id: "analytics",
@@ -200,6 +215,17 @@ export default function ProjectsSection() {
                 </div>
               </div>
               <div className="modal-actions">
+                {selectedProject.demoLink &&
+                  selectedProject.demoLink !== "#" && (
+                    <a
+                      href={selectedProject.demoLink}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="modal-btn demo"
+                    >
+                      Launch App <i className="fas fa-external-link-alt"></i>
+                    </a>
+                  )}
                 <a
                   href={selectedProject.repoLink}
                   target="_blank"
