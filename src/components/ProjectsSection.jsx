@@ -9,7 +9,7 @@ export const projects = [
     title: "ZenviaLiving",
     desc: "Looking for rooms, villas, or homes to stay in, whether abroad or locally, with easy listing for property owners.",
     longDesc:
-      "This project is designed for people who are looking for rooms, villas, or homes to stay in, whether in a foreign country or their own country. Users can easily search for and find suitable accommodations based on their needs. It also allows homeowners and property owners to list their rooms, villas, or homes on the platform.",
+      "This is a Full-Stack Project designed for people who are looking for rooms, villas, or homes to stay in, whether in a foreign country or their own country. Users can easily search for and find suitable accommodations based on their needs. The platform also allows homeowners and property owners to list their rooms, villas, or homes, making it easier for users to discover and book suitable properties.",
     tags: [
       "EJS",
       "MongoDB Atlas",
