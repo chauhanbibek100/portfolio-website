@@ -172,6 +172,14 @@ const certificationsData = [
     date: "2026",
     link: "https://www.coursera.org/account/accomplishments/verify/L9A7TI8JUD21",
   },
+  {
+    id: 14,
+    title: "Figma",
+    issuer: "LinkedIn Learning",
+    platform: "LinkedIn Learning",
+    date: "2026",
+    link: "https://www.linkedin.com/learning/certificates/e7d919a8a9b864a42f7050736cfdc8fc7c5be2df805507665c8351908b755684?trk=share_certificate",
+  },
 ];
 
 export default function EducationSection() {
