@@ -4,14 +4,14 @@ import "./AboutSection.css";
 export default function AboutSection() {
   return (
     <section className="about-section" id="about">
-        <div className="about-header">
-          <span className="section-badge">
-            <i className="fas fa-user"></i> About Me
-          </span>
-          <h2 className="section-title">
-            Who <span className="gradient-text">I Am</span>
-          </h2>
-        </div>
+      <div className="about-header">
+        <span className="section-badge">
+          <i className="fas fa-user"></i> About Me
+        </span>
+        <h2 className="section-title">
+          Who <span className="gradient-text">I Am</span>
+        </h2>
+      </div>
 
       <div className="about-inner">
         <div className="about-left">
@@ -59,7 +59,7 @@ export default function AboutSection() {
               internship opportunities to grow as a software developer.
             </p>
             <a
-              href="https://drive.google.com/file/d/1p1YQaNx8pXddpu2P0Q0ITEnX1oLuThwk/view?usp=sharing"
+              href="https://drive.google.com/file/d/11ZbUNC1iQy0tjw2FzXTgEFfHMIIOw1Ro/view?usp=sharing"
               target="_blank"
               className="download-resume-btn"
             >
