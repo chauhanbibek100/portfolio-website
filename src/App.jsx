@@ -11,7 +11,7 @@ import Footer from "./components/Footer";
 import "./App.css";
 
 function App() {
-  const [theme, setTheme] = useState("dark");
+  const [theme, setTheme] = useState("light");
 
   useEffect(() => {
     document.documentElement.setAttribute("data-theme", theme);
