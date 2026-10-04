@@ -63,8 +63,17 @@ export default function Header({ theme, toggleTheme }) {
 
   return (
     <header className="navbar-header">
-      <div className="navbar-logo">
-        Bibek<span className="logo-dot">.</span>
+      <div className="navbar-logo" onClick={() => handleClick('home')} style={{ cursor: 'pointer' }}>
+        <div className="logo-3d-wrapper">
+          <div className="logo-3d-cube">
+            <span className="logo-3d-text">B</span>
+            <div className="logo-3d-shine"></div>
+          </div>
+          <div className="logo-brand-text">
+            <span className="logo-name">Bibek</span>
+            <span className="logo-title">Dev</span>
+          </div>
+        </div>
       </div>
       <nav className={`navbar-pill-container ${isMobileMenuOpen ? 'open' : ''}`}>
         {navItems.map((item) => (

@@ -1,6 +1,12 @@
 /* ========================================
    GLOBAL RESET & CSS VARIABLES
    ======================================== */
+
+/* Prevent white flash before theme script runs */
+html {
+  background-color: #f0f4f8;
+}
+
 :root {
   --font-primary: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
   --font-mono: 'JetBrains Mono', 'Fira Code', monospace;

@@ -100,6 +100,15 @@
   </head>
 
   <body>
+    <!-- Anti-FOUC: apply theme BEFORE first paint, before React loads -->
+    <script>
+      (function () {
+        var theme = localStorage.getItem('theme') || 'light';
+        document.documentElement.setAttribute('data-theme', theme);
+        document.documentElement.style.background =
+          theme === 'dark' ? '#0a0e1a' : '#f0f4f8';
+      })();
+    </script>
     <div id="root"></div>
     <script type="module" src="/src/main.jsx"></script>
   </body>
