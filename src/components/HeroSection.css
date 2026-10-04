@@ -4,7 +4,7 @@
   display: flex;
   align-items: center;
   padding: 80px 8% 28px;
-  background: #060913;
+  background: transparent;
   overflow: hidden;
   /* default spotlight position — center */
   --mx: 50%;
@@ -12,7 +12,7 @@
 }
 
 [data-theme="light"] .hero-section {
-  background: #f0f4f8;
+  background: transparent;
 }
 
 /* ── Cursor Spotlight ────────────────────────────────────────────── */

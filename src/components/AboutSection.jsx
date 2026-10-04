@@ -60,7 +60,7 @@ export default function AboutSection() {
             </p>
             <a
               href="https://drive.google.com/file/d/11ZbUNC1iQy0tjw2FzXTgEFfHMIIOw1Ro/view?usp=sharing"
-              target="_blank"
+              target="_blank" rel="noopener noreferrer"
               className="download-resume-btn"
             >
               <i className="fas fa-eye"></i>Resume

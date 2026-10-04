@@ -8,6 +8,7 @@ import ProjectsSection from "./components/ProjectsSection";
 import EducationSection from "./components/EducationSection";
 import ContactSection from "./components/ContactSection";
 import Footer from "./components/Footer";
+import Background3D from "./components/Background3D";
 import "./App.css";
 
 function App() {
@@ -17,8 +18,8 @@ function App() {
 
   useEffect(() => {
     document.documentElement.setAttribute('data-theme', theme);
-    document.documentElement.style.background =
-      theme === 'dark' ? '#0a0e1a' : '#f0f4f8';
+    // Remove solid background on document element so 3D background can show through
+    document.documentElement.style.background = 'transparent';
     localStorage.setItem('theme', theme);
   }, [theme]);
 
@@ -28,8 +29,9 @@ function App() {
 
   return (
     <>
+      <Background3D />
       <Header theme={theme} toggleTheme={toggleTheme} />
-      <main className="main-content">
+      <main className="main-content" style={{ position: 'relative', zIndex: 10 }}>
         <HeroSection />
         <AboutSection />
         <SkillsSection />

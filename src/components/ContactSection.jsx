@@ -555,8 +555,7 @@ function ContactSection() {
                     <p>
                       <a
                         href="https://github.com/chauhanbibek100"
-                        target="_blank"
-                        rel="noopener noreferrer"
+                        target="_blank" rel="noopener noreferrer"
                       >
                         github
                       </a>
@@ -573,8 +572,7 @@ function ContactSection() {
                     <p>
                       <a
                         href="https://www.linkedin.com/in/bibek-chauhan/"
-                        target="_blank"
-                        rel="noopener noreferrer"
+                        target="_blank" rel="noopener noreferrer"
                       >
                         linkedin
                       </a>
@@ -597,8 +595,7 @@ function ContactSection() {
             {/* WhatsApp CTA */}
             <a
               href="https://wa.me/919263953996"
-              target="_blank"
-              rel="noopener noreferrer"
+              target="_blank" rel="noopener noreferrer"
               className="whatsapp-panel glass-card"
             >
               <div className="wa-panel-icon">

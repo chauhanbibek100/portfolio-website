@@ -11,12 +11,14 @@ export default function HeroSection() {
   };
 
   const handleMouseMove = useCallback((e) => {
-    const rect = sectionRef.current?.getBoundingClientRect();
-    if (!rect) return;
-    const x = e.clientX - rect.left;
-    const y = e.clientY - rect.top;
-    sectionRef.current.style.setProperty("--mx", `${x}px`);
-    sectionRef.current.style.setProperty("--my", `${y}px`);
+    requestAnimationFrame(() => {
+      const rect = sectionRef.current?.getBoundingClientRect();
+      if (!rect) return;
+      const x = e.clientX - rect.left;
+      const y = e.clientY - rect.top;
+      sectionRef.current.style.setProperty("--mx", `${x}px`);
+      sectionRef.current.style.setProperty("--my", `${y}px`);
+    });
   }, []);
 
   const handleMouseLeave = useCallback(() => {
@@ -38,12 +40,15 @@ export default function HeroSection() {
       {/* Cursor spotlight overlay */}
       <div className="hero-spotlight" aria-hidden="true"></div>
 
-      {/* Background glowing/grid decorations */}
+      {/* Background glowing/grid decorations (optional, kept from original) */}
       <div className="hero-grid-bg"></div>
       <div className="hero-glow-blob cyan"></div>
       <div className="hero-glow-blob purple"></div>
 
-      <div className="hero-container">
+      <div
+        className="hero-container"
+        style={{ position: "relative", zIndex: 2 }}
+      >
         {/* Left Info Column */}
         <div className="hero-info">
           <h1 className="hero-heading">

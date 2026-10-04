@@ -32,41 +32,24 @@ const servicesData = [
   },
   {
     id: 3,
-    icon: "fas fa-globe",
-    title: "Want a Website?",
+    icon: "fas fa-wand-magic-sparkles",
+    title: "AI Features & Integrations",
     description:
-      "I'll design and build a stunning website that looks great on phones, tablets, and desktops.",
-    benefits: ["Fast loading speed", "Works on all devices", "Easy to update"],
-    color: "#f472b6",
-  },
-  {
-    id: 4,
-    icon: "fas fa-shopping-bag",
-    title: "Need an Online Store?",
-    description:
-      "Sell your products online with a secure, easy-to-use shop your customers will love.",
-    benefits: ["Secure payments", "Product management", "Order tracking"],
-    color: "#fb923c",
-  },
-  {
-    id: 5,
-    icon: "fas fa-lightbulb",
-    title: "Got a Business Idea?",
-    description:
-      "Turn your idea into a real working app — from concept to launch, I handle everything.",
-    benefits: ["Idea to launch", "Custom features", "Growth-ready"],
+      "Integrating LLMs, custom chatbots, automated workflows, and smart search features into existing platforms.",
+    benefits: ["Custom chatbots & LLMs", "Automated workflows", "Smart search features"],
     color: "#3b82f6",
   },
   {
-    id: 6,
-    icon: "fas fa-headset",
-    title: "Ongoing Support?",
+    id: 4,
+    icon: "fas fa-gauge-high",
+    title: "Performance & SEO Audit",
     description:
-      "Don't worry about tech stuff — I'll keep your site updated, secure, and running smoothly.",
-    benefits: ["Regular updates", "Bug fixes", "24/7 monitoring"],
+      "Speed optimization, code refactoring, accessibility enhancements, and search engine positioning.",
+    benefits: ["Speed optimization", "Code refactoring", "Search engine ranking"],
     color: "#22c55e",
-  },
+  }
 ];
+
 
 export default function ServicesSection() {
   const handleCTA = () => {
@@ -109,20 +92,6 @@ export default function ServicesSection() {
               </ul>
             </div>
           ))}
-        </div>
-
-        {/* CTA Banner */}
-        <div className="services-cta">
-          <div className="cta-content">
-            <h3 className="cta-heading">Have something else in mind?</h3>
-            <p className="cta-text">
-              Tell me about your project — I'd love to help bring your idea to
-              life.
-            </p>
-          </div>
-          <button className="cta-button" onClick={handleCTA}>
-            Let's Talk <i className="fas fa-arrow-right"></i>
-          </button>
         </div>
       </div>
     </section>

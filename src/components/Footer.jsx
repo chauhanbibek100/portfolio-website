@@ -11,7 +11,7 @@ const Footer = () => {
           <a
             href="https://www.linkedin.com/in/bibek-chauhan/"
             className="social-link"
-            target="_blank"
+            target="_blank" rel="noopener noreferrer"
             aria-label="LinkedIn"
           >
             <i className="fab fa-linkedin"></i>
@@ -19,7 +19,7 @@ const Footer = () => {
           <a
             href="https://github.com/chauhanbibek100"
             className="social-link"
-            target="_blank"
+            target="_blank" rel="noopener noreferrer"
             aria-label="GitHub"
           >
             <i className="fab fa-github"></i>
@@ -27,7 +27,7 @@ const Footer = () => {
           <a
             href="https://www.instagram.com/bibek_chauhan_292/?hl=en"
             className="social-link"
-            target="_blank"
+            target="_blank" rel="noopener noreferrer"
             aria-label="Instagram"
           >
             <i className="fab fa-instagram"></i>
@@ -36,8 +36,7 @@ const Footer = () => {
             href="https://wa.me/919263953996"
             className="social-link"
             aria-label="WhatsApp"
-            target="_blank"
-            rel="noopener noreferrer"
+            target="_blank" rel="noopener noreferrer"
           >
             <i className="fab fa-whatsapp"></i>
           </a>

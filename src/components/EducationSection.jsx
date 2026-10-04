@@ -313,8 +313,7 @@ export default function EducationSection() {
               {certificationsData.map((cert) => (
                 <a
                   href={cert.link}
-                  target="_blank"
-                  rel="noopener noreferrer"
+                  target="_blank" rel="noopener noreferrer"
                   className="certification-card-item"
                   key={cert.id}
                   title={`View Certificate: ${cert.title}`}
