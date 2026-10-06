@@ -286,7 +286,14 @@
     gap: 24px;
   }
 
+  /* Keep stats pills 3-across on mobile — stacking them wastes too much vertical space */
   .stats-pills {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 8px;
+  }
+
+  .pill {
+    padding: 10px 6px;
+    font-size: 0.7rem;
   }
 }

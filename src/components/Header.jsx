@@ -63,6 +63,14 @@ export default function Header({ theme, toggleTheme }) {
 
   return (
     <header className="navbar-header">
+      {/* Mobile overlay — closes menu when tapped (like every native app) */}
+      {isMobileMenuOpen && (
+        <div
+          className="mobile-menu-overlay"
+          onClick={toggleMobileMenu}
+          aria-hidden="true"
+        />
+      )}
       <div className="navbar-logo" onClick={() => handleClick('home')} style={{ cursor: 'pointer' }}>
         <div className="logo-3d-wrapper">
           <div className="logo-3d-cube">

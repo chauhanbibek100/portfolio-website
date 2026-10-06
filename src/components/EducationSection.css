@@ -445,5 +445,14 @@
 
   .certifications-grid {
     grid-template-columns: 1fr;
+    /* Remove height cap on mobile so all certs are visible without inner scroll */
+    max-height: none;
+    overflow-y: visible;
+  }
+
+  /* Tap feedback on certification cards */
+  .certification-card-item:active {
+    transform: scale(0.97) !important;
+    transition: transform 0.1s ease !important;
   }
 }

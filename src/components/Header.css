@@ -17,6 +17,9 @@
 .navbar-logo {
   display: flex;
   align-items: center;
+  /* Stay above mobile overlay */
+  position: relative;
+  z-index: 1001;
 }
 
 /* ── 3D Logo ── */
@@ -166,6 +169,9 @@
   display: flex;
   align-items: center;
   gap: 12px;
+  /* Must sit above the mobile overlay (z-index: 998) so X button stays visible */
+  position: relative;
+  z-index: 1001;
 }
 
 .theme-toggle-btn {
@@ -216,6 +222,7 @@
     display: flex;
   }
 
+  /* Mobile nav drawer */
   .navbar-pill-container {
     position: fixed;
     top: 0;
@@ -234,7 +241,10 @@
     pointer-events: none;
     transform: translateX(100%);
     transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-    z-index: -1;
+    /* Fixed z-index so drawer appears above all content */
+    z-index: 999;
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
   }
 
   .navbar-pill-container.open {
@@ -249,5 +259,19 @@
     margin-bottom: 8px;
     border-radius: 12px;
     font-size: 1.05rem;
+  }
+
+  /* Dark overlay behind mobile drawer — same pattern as every native app */
+  .mobile-menu-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 998;
+    animation: overlayFadeIn 0.25s ease forwards;
+  }
+
+  @keyframes overlayFadeIn {
+    from { opacity: 0; }
+    to   { opacity: 1; }
   }
 }

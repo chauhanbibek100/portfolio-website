@@ -811,7 +811,8 @@
   .contact-toast {
     left: 16px;
     right: 16px;
-    bottom: 16px;
+    /* Push above bottom nav (68px) + breathing room */
+    bottom: 80px;
     max-width: none;
   }
 

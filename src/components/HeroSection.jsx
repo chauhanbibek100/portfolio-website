@@ -93,6 +93,7 @@ export default function HeroSection() {
               src={developerImg}
               alt="Bibek - Full-Stack Developer"
               className="portrait-image"
+              loading="lazy"
             />
           </div>
           <div className="portrait-caption-box">

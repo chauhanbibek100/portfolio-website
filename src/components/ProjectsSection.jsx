@@ -121,11 +121,19 @@ export default function ProjectsSection() {
                 className="project-img"
                 style={{
                   background: project.image
-                    ? `url(${project.image}) center center / cover no-repeat`
+                    ? undefined
                     : project.gradient,
+                  overflow: 'hidden',
                 }}
               >
-                {!project.image && (
+                {project.image ? (
+                  <img
+                    src={project.image}
+                    alt={project.title}
+                    loading="lazy"
+                    style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }}
+                  />
+                ) : (
                   <div className="project-img-content">
                     <i className={project.icon}></i>
                     <span>{project.iconLabel}</span>

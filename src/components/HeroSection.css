@@ -130,7 +130,7 @@
 }
 
 .hero-heading {
-  font-size: 3.5rem;
+  font-size: clamp(2rem, 8vw, 3.5rem);
   font-weight: 900;
   letter-spacing: -0.04em;
   margin: 0;
@@ -384,6 +384,37 @@
     align-items: center;
   }
   .hero-actions {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 768px) {
+  /* Reduce glow blob sizes on mobile — halved to cut GPU paint area */
+  .hero-glow-blob.cyan {
+    width: 150px;
+    height: 150px;
+  }
+
+  .hero-glow-blob.purple {
+    width: 200px;
+    height: 200px;
+  }
+
+  /* Reduce hero padding to maximize content space */
+  .hero-section {
+    padding: 80px 5% 28px;
+  }
+
+  /* Hero action buttons stack better on very small screens */
+  .hero-actions {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 12px;
+  }
+
+  .hero-btn-primary,
+  .hero-btn-secondary {
+    width: 100%;
     justify-content: center;
   }
 }

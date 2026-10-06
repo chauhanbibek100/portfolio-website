@@ -87,6 +87,7 @@ html {
 
 html {
   scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 
 section {
@@ -247,5 +248,107 @@ button {
   to {
     transform: translateY(0);
     opacity: 1;
+  }
+}
+
+/* ========================================
+   MOBILE PERFORMANCE & APP-FEEL
+   ======================================== */
+
+/* Remove 300ms tap delay on all interactive elements */
+button,
+a,
+[role="button"],
+input,
+textarea,
+select {
+  touch-action: manipulation;
+}
+
+/* GPU compositing hints — move animated elements to own layer */
+.logo-3d-cube,
+.sparkle-decoration,
+.hero-glow-blob,
+.scroll-indicator,
+.pulse-dot::after {
+  will-change: transform;
+}
+
+/* ── Mobile-specific optimizations ── */
+@media (max-width: 768px) {
+  /* Bottom nav spacing — keeps content from being hidden behind bottom nav */
+  body {
+    padding-bottom: 68px;
+  }
+
+  /* Hide sparkle decoration (overlaps bottom nav on mobile) */
+  .sparkle-decoration {
+    display: none;
+  }
+
+  /* Reduce backdrop-filter blur on mobile — major GPU scroll-jank fix */
+  .glass-card,
+  .glass-panel,
+  .about-content,
+  .pill,
+  .portrait-caption-box,
+  .country-dropdown-menu,
+  .service-card,
+  .skills-card,
+  .project-card {
+    backdrop-filter: blur(8px) !important;
+    -webkit-backdrop-filter: blur(8px) !important;
+  }
+
+  .navbar-pill-container {
+    backdrop-filter: blur(8px) !important;
+    -webkit-backdrop-filter: blur(8px) !important;
+  }
+
+  .toast {
+    backdrop-filter: blur(12px) !important;
+    -webkit-backdrop-filter: blur(12px) !important;
+  }
+
+  /* ── Tap feedback (app-like feel) ── */
+  /* Cards: subtle shrink on tap */
+  .project-card:active,
+  .service-card:active,
+  .skills-card:active,
+  .about-content:active {
+    transform: scale(0.98) !important;
+    transition: transform 0.1s ease !important;
+  }
+
+  /* Buttons: clear press feedback */
+  .hero-btn-primary:active,
+  .hero-btn-secondary:active,
+  .proj-link:active,
+  .modal-btn:active,
+  .submit-btn:active,
+  .download-resume-btn:active,
+  .cta-button:active,
+  .theme-toggle-btn:active,
+  .mobile-menu-btn:active,
+  .navbar-pill-btn:active {
+    transform: scale(0.93) !important;
+    transition: transform 0.1s ease !important;
+  }
+
+  .social-link:active {
+    transform: scale(0.88) !important;
+    transition: transform 0.1s ease !important;
+  }
+}
+
+/* Respect system reduced-motion preference */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
   }
 }

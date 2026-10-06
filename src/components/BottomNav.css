@@ -1,0 +1,66 @@
+/* Bottom nav is hidden on desktop — mobile only */
+.bottom-nav {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .bottom-nav {
+    display: flex;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 60px;
+    background: var(--header-bg);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    border-top: 1px solid var(--border-color);
+    z-index: 997;
+    justify-content: space-around;
+    align-items: stretch;
+    /* Safe area for notched phones (iPhone X+) */
+    padding-bottom: env(safe-area-inset-bottom, 0px);
+  }
+
+  .bottom-nav-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 3px;
+    flex: 1;
+    padding: 6px 4px;
+    color: var(--text-muted);
+    font-size: 0.6rem;
+    font-weight: 600;
+    letter-spacing: 0.02em;
+    background: none;
+    border: none;
+    cursor: pointer;
+    transition: color 0.2s ease;
+    font-family: var(--font-primary);
+    /* Remove tap delay */
+    touch-action: manipulation;
+  }
+
+  .bottom-nav-item i {
+    font-size: 1.1rem;
+    transition: transform 0.2s cubic-bezier(0.34, 1.56, 0.64, 1);
+    will-change: transform;
+  }
+
+  .bottom-nav-item.active {
+    color: var(--accent-blue);
+  }
+
+  /* Active icon pops up slightly — feel like a native tab bar */
+  .bottom-nav-item.active i {
+    transform: translateY(-3px);
+  }
+
+  /* Instant tap shrink feedback */
+  .bottom-nav-item:active {
+    transform: scale(0.88);
+    transition: transform 0.1s ease;
+  }
+}

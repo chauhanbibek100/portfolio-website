@@ -376,7 +376,8 @@
   }
 }
 
-@media (max-width: 576px) {
+/* On phones, 1 column gives cards room to breathe */
+@media (max-width: 768px) {
   .projects-section {
     padding: 20px 5% 16px;
   }
@@ -384,8 +385,29 @@
   .projects-grid {
     grid-template-columns: 1fr;
   }
+}
+
+/* Bottom-sheet modal on mobile — feels like a native app */
+@media (max-width: 768px) {
+  .modal-overlay {
+    align-items: flex-end;
+    padding: 0;
+  }
 
   .modal-content {
+    width: 100%;
+    max-width: 100%;
+    max-height: 88vh;
+    border-radius: 20px 20px 0 0;
     padding: 20px;
+    /* Slide up from bottom */
+    animation: modalBottomSheetIn 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+    /* Safe area for notched phones (iPhone X+) */
+    padding-bottom: max(20px, env(safe-area-inset-bottom));
+  }
+
+  @keyframes modalBottomSheetIn {
+    from { transform: translateY(100%); opacity: 0; }
+    to   { transform: translateY(0);    opacity: 1; }
   }
 }

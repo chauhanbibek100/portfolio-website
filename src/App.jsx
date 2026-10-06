@@ -9,11 +9,12 @@ import EducationSection from "./components/EducationSection";
 import ContactSection from "./components/ContactSection";
 import Footer from "./components/Footer";
 import Background3D from "./components/Background3D";
+import BottomNav from "./components/BottomNav";
 import "./App.css";
 
 function App() {
   const [theme, setTheme] = useState(
-    () => localStorage.getItem('theme') || 'light'
+    () => localStorage.getItem('theme') || 'dark'
   );
 
   useEffect(() => {
@@ -41,6 +42,8 @@ function App() {
         <ContactSection />
       </main>
       <Footer />
+      {/* Mobile-only bottom nav bar — hidden on desktop via CSS */}
+      <BottomNav />
     </>
   );
 }
